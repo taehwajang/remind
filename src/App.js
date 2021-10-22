@@ -2,7 +2,6 @@ import React from "react" ;
 import Header from "./component/Header"
 import KakaoMap from "./component/KakaoMap";
 
-
 const App = () => {
 
   
@@ -11,8 +10,8 @@ const App = () => {
     <div>
         <Header />
         <KakaoMap />
-        
-        
+
+
     </div>
   )
 }
