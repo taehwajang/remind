@@ -15,9 +15,10 @@ const KakaoMap = () => {
     setSearch('');
   }
   const deleteBtn =(id)=>{
-    
-    
-    
+
+    setSearchArr(searchArr.filter(id => searchArr.id !== id))
+   
+
   }
   const reset =()=>{
     setSearchArr([]);
@@ -31,7 +32,7 @@ const KakaoMap = () => {
         
         <div style={{border:"1px solid black" , display:"flex", justifyContent:"center" ,flexDirection:"column", marginTop:"20px", width:"60%", marginLeft:"100px",height:"100%" , borderRadius:"25px"}}>
           {searchArr.map((value,index) => (
-            <p  id ={index} style={{marginTop:"5px",marginBottom:"5px", marginLeft: "15px"}} >{value}<Button onClick={deleteBtn(index)}>삭제</Button></p>
+            <p key={index} id ={index} style={{marginTop:"5px",marginBottom:"5px", marginLeft: "15px"}} >{value}<Button onClick={deleteBtn(index)}>삭제</Button></p>
         ))}
         </div>
     
